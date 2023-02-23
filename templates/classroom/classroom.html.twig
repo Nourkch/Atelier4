@@ -1,0 +1,18 @@
+ {{ dump(classroom) }}
+<hr>
+
+ <table border =1>
+ <tr>
+ <td>ID :</td>
+  <td>Name :</td>
+  <td>Action :</td>
+ </tr>
+ <tr>
+{% for i in classroom %}
+<td>{{i.id}}</td> 
+<td>{{i.name}}</td>
+<td><a href="{{path('delete',{'id':i.id})}}"><input type="submit" value="Supprimer"></a></td>
+</tr>
+{% endfor %}
+
+</table>

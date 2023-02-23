@@ -1,0 +1,15 @@
+ <table border =1>
+ <tr>
+ <td> Ref:</td>
+  <td>Created at :</td>
+  <td>Action :</td>
+ </tr>
+ <tr>
+{% for i in club %}
+<td>{{i.id}}</td> 
+<td>{{i.createdAt | date ('y-m-d') }}</td>
+<td><a href="{{path('delete_club',{'id':i.id})}}"><input type="submit" value="Supprimer"></a></td>
+</tr>
+{% endfor %}
+
+</table>

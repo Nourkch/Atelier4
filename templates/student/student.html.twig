@@ -1,0 +1,16 @@
+
+ <table border =1>
+ <tr>
+ <td>NCS :</td>
+  <td>Email :</td>
+  <td>Action :</td>
+ </tr>
+ <tr>
+{% for i in student %}
+<td>{{i.id}}</td> 
+<td>{{i.email}}</td>
+<td><a href="{{path('delete_student',{'id':i.id})}}"><input type="submit" value="Supprimer"></a></td>
+</tr>
+{% endfor %}
+
+</table>
